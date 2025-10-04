@@ -10,11 +10,25 @@
 		91AD9C122E918B3100094206 /* PhotoFilterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFilterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		91AD9C312E91901A00094206 /* Exceptions for "PhotoFilterApp" folder in "PhotoFilterApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 91AD9C112E918B3100094206 /* PhotoFilterApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		91AD9C142E918B3100094206 /* PhotoFilterApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PhotoFilterApp;
-			sourceTree = "<group>";
+			exceptions = (
+				91AD9C312E91901A00094206 /* Exceptions for "PhotoFilterApp" folder in "PhotoFilterApp" target */,
+			);
+			name = PhotoFilterApp;
+			path = /Users/roydimapilis/Desktop/PhotoFilterApp/PhotoFilterApp/PhotoFilterApp;
+			sourceTree = "<absolute>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -256,6 +270,13 @@
 				DEVELOPMENT_TEAM = 8344Y5PFV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoFilterApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to take photos";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need permission to save photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need photo library access ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +305,13 @@
 				DEVELOPMENT_TEAM = 8344Y5PFV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoFilterApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to take photos";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need permission to save photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need photo library access ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

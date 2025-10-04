@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct PhotoFilterAppApp: App {
+struct PhotoFilterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
