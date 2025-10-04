@@ -1,18 +1,11 @@
-//
-//  ContentView.swift
-//  PhotoFilterApp
-//
-//  Created by Roy Dimapilis on 10/4/25.
-//
-
 import SwiftUI
 import PhotosUI
 
 struct ContentView: View {
     @State private var selectedImage: UIImage?
     @State private var filteredImage: UIImage?
-    @State private var showImagePicker = false
-    @State private var sourceType: UIImagePickerController.SourceType = .camera
+    @State private var showCameraPicker = false
+    @State private var showLibraryPicker = false
     @State private var selectedFilter: FilterType = .none
     @State private var filterIntensity: Double = 1.0
     @State private var showAlert = false
@@ -79,8 +72,8 @@ struct ContentView: View {
                 HStack(spacing: 20) {
                     // Camera Button
                     Button(action: {
-                        sourceType = .camera
-                        showImagePicker = true
+                        print("Camera button tapped")
+                        showCameraPicker = true
                     }) {
                         Label("Camera", systemImage: "camera.fill")
                             .frame(maxWidth: .infinity)
@@ -92,8 +85,8 @@ struct ContentView: View {
                     
                     // Photo Library Button
                     Button(action: {
-                        sourceType = .photoLibrary
-                        showImagePicker = true
+                        print("Library button tapped")
+                        showLibraryPicker = true
                     }) {
                         Label("Library", systemImage: "photo.fill")
                             .frame(maxWidth: .infinity)
@@ -120,8 +113,18 @@ struct ContentView: View {
             }
             .padding()
             .navigationTitle("Photo Filter")
-            .sheet(isPresented: $showImagePicker) {
-                ImagePicker(image: $selectedImage, sourceType: sourceType)
+            .sheet(isPresented: $showCameraPicker) {
+                ImagePicker(image: $selectedImage, sourceType: .camera)
+                    .onDisappear {
+                        if selectedImage != nil {
+                            selectedFilter = .none
+                            filteredImage = nil
+                            filterIntensity = 1.0
+                        }
+                    }
+            }
+            .sheet(isPresented: $showLibraryPicker) {
+                ImagePicker(image: $selectedImage, sourceType: .photoLibrary)
                     .onDisappear {
                         if selectedImage != nil {
                             selectedFilter = .none
